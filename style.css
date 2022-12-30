@@ -1,0 +1,302 @@
+/*CSS Reset*/
+
+*{
+    margin:0;
+    padding:0;
+}
+
+
+/* css variable */
+:root{
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar */
+#navbar{
+    display: flex;
+    align-items: center;
+}
+
+/* Navigation Bar: Logo and Image  */
+#logo{
+    margin: 0px 45px;
+}
+
+#logo img{
+    height: 59px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul{
+    display:flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size:1.3rem;
+}
+
+#navbar ul li a{
+    color:white;
+    display:block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+/* background change */
+#navbar::before{
+    content:"";
+    background-color: black;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    /* opacity:1; */
+}
+
+#navbar ul li a:hover{
+    color:black;
+    background-color: aliceblue;
+}
+
+#navbar{
+    position: relative;
+}
+
+
+/* Home Section */
+#home{
+    display:flex;
+    flex-direction: column;
+    padding:3px 200px;
+    justify-content:center;
+    align-items: center;
+}
+
+/* background change */
+#home::before{
+    content:"";
+    background: url('images/food-cover.jpg') no-repeat center/cover; 
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index:-1;
+    opacity:0.5;
+}
+
+/* giving this height so that content in header to the middle */
+#home{
+    height:400px;
+}
+
+
+#home h1{
+    color:rgb(217, 208, 47);
+    text-align: center;
+    font-family: 'Baloo Bhai'
+}
+
+#home p{
+    color:rgb(12, 217, 228);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Baloo Bhai'
+}
+
+
+/* services container */
+
+
+
+/* utility classes */
+.h-primary{
+    font-size: 2.8rem;
+    padding: 12px;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin:17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+.center{
+    text-align: center;
+}
+
+/* M -- Our Services */
+.services-contaner h1{
+    /* border: 1px solid red; */
+    /* text-align: center; */
+    margin-top:6%;
+    padding-top:2%;
+    padding-bottom:0;
+    font-family: baloo bhai;
+    font-size: 4vw;
+}
+
+#service{
+    /* border: */
+    display:flex;
+    justify-content: center;
+    /* margin:2% 5%; */
+    /* margin-top: 4%; */
+    /* border: 1px solid red; */
+    padding: 2% 5% 5% 5%;
+    width: 89.8%;
+    height: 60%;
+}
+
+.box{
+    /* display:flex; */
+    justify-content: center;
+    border: 2px solid #770a0a;
+    border-radius: 20px;
+    width:60%;
+    /* float:left; */
+    margin:1% 2%;
+    padding:1% 3%;
+    /* align-items: center; */
+}
+
+.box img{
+    /* align-items: center; */
+    /* display:flex; */
+    /* justify-content: center; */
+    margin:0 36%;
+}
+
+.box p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:1.3vw;
+    /* font-weight:500; */
+}
+
+.box h2{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+/* M -- Our Clients */
+
+
+#parent-icons{
+    background-image: url(images/food-cover.jpg);
+    background-size: cover;
+}   
+
+#parent-icons h3{
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 4px 0 35px 0;
+    padding-top: 20px;
+    font-size: 170%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bolder;
+    color: #07f8f8;
+}
+
+#child-client{
+    /* border: 1px solid red; */
+    display:flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+}
+
+#child-client img{
+    /* border: 1px solid red; */
+    height:50px;
+    width: 90%;
+    padding: 0 5%;
+
+}
+
+
+/* M -- Contact */
+
+#parent-contact{
+    /* border:1px solid red; */
+    background-image: url(images/istockphoto-1311934969-612x612.jpg);
+    background-size: cover;
+    padding-bottom: 5%;
+
+}
+
+#parent-contact h3{
+    /* align-items: center; */ /*this doesnt work*/
+    text-align: center;
+    padding: 18px 0;
+    font-family: baloo bhai;
+    color: #dfe22b;
+    font-size: 200%;
+}
+
+.form-details{
+    /* border:1px solid red; */
+    /* padding-right: .3%; */
+    padding-left: 0;
+    margin-left: 0;
+}
+
+/* #form-contact{
+    text-align: center;
+} */
+
+#form-contact{
+    margin:0 33%;
+    /* align-items: center; */
+    /* text-align: center; */
+}
+
+#form-contact input{
+    width: 110%;
+    padding: 1% 0 1% 0.9%;
+    /* padding will not affect the width */
+    border-radius: 4px;
+    height: 10%;
+    /* padding:5px 100px; */
+    /* padding: 1% 66% 1% 0; */
+    /* padding is creating difference between input and button in responsive state so instead of padding we are giving width */
+}
+
+button{
+    width: 111%;
+    background-color: #770a0a;
+    color:aliceblue;
+    border-radius: 4px;
+    padding: 2% 0;
+    cursor:pointer;
+    /* padding: 0.3% 50%; */
+    /* padding left and right is creating difference between input and button in responsive state so instead of padding we are giving width */
+}
+
+
+/* M -- CopyRight */
+
+#copy{
+    /* border: 1px solid red; */
+    height:30px;
+    display:flex;
+    justify-content: center;
+    padding: 10px 0 5px 0;
+    background-color: gray;
+    font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+
+
